@@ -4,7 +4,7 @@ resource "yandex_alb_load_balancer" "lb-mollyj" {
 
   allocation_policy {
     location {
-      zone_id   = "ru-central1-a"
+      zone_id   = var.zone_id
       subnet_id = yandex_vpc_subnet.subnet.id
     }
   }
@@ -39,7 +39,7 @@ resource "yandex_alb_load_balancer" "lb-mollyj" {
         http_handler {
           http_router_id = yandex_alb_http_router.mollyj-router.id
         }
-        certificate_ids = [var.tls_cert_id]
+        certificate_ids = [yandex_cm_certificate.mollyj-certificate.id]
       }
     }
   }

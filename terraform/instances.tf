@@ -1,6 +1,6 @@
 resource "yandex_compute_instance" "vm1" {
   name = "mollyj-1"
-  zone = "ru-central1-a"
+  zone = var.zone_id
 
   resources {
     cores  = 2
@@ -27,7 +27,7 @@ resource "yandex_compute_instance" "vm1" {
 
 resource "yandex_compute_instance" "vm2" {
   name = "mollyj-2"
-  zone = "ru-central1-a"
+  zone = var.zone_id
 
   resources {
     cores  = 2

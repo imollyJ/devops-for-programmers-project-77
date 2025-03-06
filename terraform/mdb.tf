@@ -18,7 +18,7 @@ resource "yandex_mdb_mysql_cluster" "dbcluster" {
   }
 
   host {
-    zone      = "ru-central1-a"
+    zone      = var.zone_id
     subnet_id = yandex_vpc_subnet.subnet.id
   }
 

@@ -10,6 +10,13 @@ variable "yc_token" {
   sensitive   = true
 }
 
+variable "zone_id" {
+  description = "Zone ID for Yandex Cloud resources"
+  type        = string
+  default     = "ru-central1-a"
+}
+
+
 variable "yc_cloud_id" {
   description = "id облака"
   type        = string
@@ -45,11 +52,6 @@ variable "domain" {
   type        = string
 }
 
-variable "tls_cert_id" {
-  description = "Идентификатор сертификата"
-  type        = string
-  sensitive   = true
-}
 
 #variable "datadog_api_key" {
 #  description = "API-key datadog"

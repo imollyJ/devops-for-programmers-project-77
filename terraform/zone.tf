@@ -10,5 +10,5 @@ resource "yandex_dns_recordset" "mollyj-rs-a" {
   name    = format("%s%s", var.domain, ".")
   type    = "A"
   ttl     = 60
-  data    = ["158.160.148.103"]
+  data    = [yandex_alb_load_balancer.lb-mollyj.listener[0].endpoint[0].address[0].external_ipv4_address[0].address]
 }

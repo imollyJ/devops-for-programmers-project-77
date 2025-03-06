@@ -7,4 +7,5 @@
 vault-password-file
 .terraform
 *.backup
-
+key.json
+.Makefile.swp
