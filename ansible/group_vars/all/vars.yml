@@ -1,0 +1,11 @@
+GHOST_PORT: 80
+GHOST_URL: mollyj.ru
+datadog_api_key: "{{ DATADOG_KEY }}"
+datadog_site: "datadoghq.eu"
+datadog_apm_instrumentation_enabled: "all"
+datadog_checks:
+  http_check:
+    init_config:
+    instances:
+      - name: check my site
+        url: http://localhost

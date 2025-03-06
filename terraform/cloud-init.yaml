@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - name: "ubuntu"
+    groups: sudo
+    shell: /bin/bash
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCtg+oVVFR5SXXc2w6Flr2+QRu/K9injvgPCUK6+aEhlZAGQrvmgrMiib1L2JNbKPj6+qW2Au/BbvMD7bfBWCOz1wyxlNj2TFFA4Ba30zv4Y1BaKeGSBO6sxz0eO62PUZcX/+Ksx02LLHkgDyKtIvF0XZO07f/pC+YIJH1c+judQI0+M2kSmqbzx76GbQS2YieND5PJHLifUG1ATv7qeFQ4tCpPbBecVJCu7nsHAdxJDg8ZO7fX7tN1k/Dl3N5LKIGYTgadocZaADqO7rKsfc+5V1lrqVWbX281b2N0+uoFVRbZXw1K+WXTk4qxBaaHkrgNBikg6hG5OJ1xl4vhiD3z1X5K+dIIKu8oJiq1f5cQXTD1rdUTzbxMExAiGdERDDc6+nKlqd43iBHraQXI4+89kYn4sXx8yz8uazXK0PIEVc0//sqhGeWWX6ZMq09l13Zoo2fX33cRQ2FGjyxHHKjtAWnOawVJ7ppQwo+/LtJkzcPk/Xe1OFaRTiC9XYjLPcJqzVCn2XD7QDHSFvaGpnyjT3WA1nvtpWVaBwHqdIftf05uZqXreIvUv+ihWJfJTJTPxn2mkESFyEhYVN2JoiJ4vtOik+d55sD6tOVyEerf7SbWIPrTO+PA/QnAgdcj2itTX46snTaUjiRutmZOZmFyJf6J4WoXEn+btpUENzU3/w== mollyj key
+    lock_passwd: false
+chpasswd:
+  list: |
+    ubuntu:ubuntu123
+  expire: false
