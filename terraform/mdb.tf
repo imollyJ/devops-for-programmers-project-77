@@ -44,6 +44,6 @@ resource "yandex_mdb_mysql_database" "db" {
 
   depends_on = [yandex_mdb_mysql_cluster.dbcluster]
   lifecycle {
-   ignore_changes = [name]
+    ignore_changes = [name]
   }
 }
