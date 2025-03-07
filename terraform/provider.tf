@@ -4,10 +4,10 @@ terraform {
       source  = "yandex-cloud/yandex"
       version = ">= 0.108.0"
     }
-#    datadog = {
-#      source = "DataDog/datadog"
-#      version = " 3.57.0 "
-#    }
+    datadog = {
+      source = "DataDog/datadog"
+      version = " 3.57.0 "
+    }
   }
 }
 
@@ -18,8 +18,8 @@ provider "yandex" {
   zone      = var.zone_id
 }
 
-#provider "datadog" {
-#  api_key = var.datadog_api_key
-#  app_key = var.datadog_app_key
-#  api_url = "https://api.datadoghq.com/"
-#}
+provider "datadog" {
+  api_key = var.datadog_api_key
+  app_key = var.datadog_app_key
+  api_url = "https://api.datadoghq.com/"
+}
