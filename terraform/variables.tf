@@ -53,14 +53,14 @@ variable "domain" {
 }
 
 
-#variable "datadog_api_key" {
-#  description = "API-key datadog"
-#  type        = string
-#  sensitive   = true
-#}
+variable "datadog_api_key" {
+  description = "API-key datadog"
+  type        = string
+  sensitive   = true
+}
 
-#variable "datadog_app_key" {
-#  description = "APP-key datadog"
-#  type        = string
-#  sensitive   = true
-#}
+variable "datadog_app_key" {
+  description = "APP-key datadog"
+  type        = string
+  sensitive   = true
+}

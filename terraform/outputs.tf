@@ -8,5 +8,8 @@ output "db_host" {
 }
 
 output "web_servers" {
-  value = yandex_compute_instance.web[*].network_interface[0].nat_ip_address
+  value = [
+    yandex_compute_instance.vm1.network_interface[0].nat_ip_address,
+    yandex_compute_instance.vm2.network_interface[0].nat_ip_address
+  ]
 }

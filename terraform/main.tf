@@ -18,7 +18,10 @@ resource "local_file" "ansible_vault" {
 
 resource "local_file" "ansible_inventory" {
   content  = templatefile("${path.module}/templates/inventory.ini.tftpl", {
-    web_servers = yandex_compute_instance.web[*].network_interface[0].nat_ip_address
+    web_servers = [
+      yandex_compute_instance.vm1.network_interface[0].nat_ip_address,
+      yandex_compute_instance.vm2.network_interface[0].nat_ip_address
+    ]
   })
   filename = "${path.module}/../ansible/inventory.ini"
 }
