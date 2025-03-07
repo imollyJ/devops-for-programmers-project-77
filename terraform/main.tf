@@ -7,7 +7,7 @@ resource "local_file" "ansible_vars" {
 
 resource "local_file" "ansible_vault" {
   content  = templatefile("${path.module}/templates/vault.yml.tftpl", {
-    db_host         = yandex_mdb_mysql_cluster.db.network[0].address
+    db_host         = yandex_mdb_mysql_cluster.dbcluster.host[0].fqdn
     db_name         = var.db_name
     db_user         = var.db_user
     db_password     = var.db_password
